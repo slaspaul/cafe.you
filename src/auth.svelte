@@ -2,52 +2,31 @@
 
 </script>
 
-<main>
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset='utf-8'>
-        <meta name='viewport' content='width=device-width,initial-scale=1'>
-    
-        <title>Svelte app</title>
-    
-        <link rel='icon' type='image/png' href='/favicon.png'>
-        <link rel='stylesheet' href='global.css'>
-    </head>
-    
-    <body>
-        <body>
-            <form>
-              <input checked="" id="signin" name="action" type="radio" value="signin">
-              <label for="signin">Sign in</label>
-              <input id="signup" name="action" type="radio" value="signup">
-              <label for="signup">Sign up</label>
-              <div id="wrapper">
-                <div id="arrow"></div>
-                <input id="email" placeholder="User Name" type="text">
-                <input id="pass" placeholder="Password" type="password">
-                <input id="repass" placeholder="Repeat password" type="password">
-              </div>
-              <button type="submit">
-                <span>
-                <br>
-                  Sign in
-                  <br>
-                  Sign up
-                </span>
-              </button>
-            </form>
-            </body>
-    </body>
-    </html>    
-</main>
-<style>
-    html, body {
-	position: relative;
-	width: 100%;
-	height: 100%;
-}
+<body>
+  <div class="authPage">
+  <input checked="" id="signin" name="action" type="radio" value="signin">
+  <label for="signin">Sign in</label>
+  <input id="signup" name="action" type="radio" value="signup">
+  <label for="signup">Sign up</label>
+  <div id="wrapper">
+  <div id="arrow"></div>
+  <input id="email" placeholder="User Name" type="text">
+  <input id="pass" placeholder="Password" type="password">
+  <input id="repass" placeholder="Repeat password" type="password">
+  </div>
+  <button type="submit">
+  <span>
+  <br>
+    Sign in
+    <br>
+    Sign up
+  </span>
+  </button>
+  </div>
+</body>
 
+<style>
+  
 body {
 	background: #e8e3d4;
 	color: #333;
@@ -57,55 +36,6 @@ body {
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
 
-a {
-	color: rgb(0,100,200);
-	text-decoration: none;
-}
-
-a:hover {
-	text-decoration: underline;
-}
-
-a:visited {
-	color: rgb(0,80,160);
-}
-
-label {
-	display: block;
-}
-
-input, button, select, textarea {
-	font-family: inherit;
-	font-size: inherit;
-	-webkit-padding: 0.4em 0;
-	padding: 0.4em;
-	margin: 0 0 0.5em 0;
-	box-sizing: border-box;
-	border: 1px solid #ccc;
-	border-radius: 2px;
-}
-
-input:disabled {
-	color: #ccc;
-}
-
-button {
-	color: #333;
-	background-color: #f4f4f4;
-	outline: none;
-}
-
-button:disabled {
-	color: #999;
-}
-
-button:not(:disabled):active {
-	background-color: #ddd;
-}
-
-button:focus {
-	border-color: #666;
-}
 
 #wrapper, label, #arrow, button span { transition: all .5s cubic-bezier(.6,0,.4,1); }
 
@@ -120,7 +50,7 @@ button:focus {
 #signup:checked ~ button span { transform: translate3d(0,-164px,0); }
 
 
-form {
+.authPage {
   width: 300px;
   height: 170px;
   margin: -185px -155px;
@@ -147,7 +77,6 @@ label:hover {
   opacity: 1;
 }
 label[for="signin"] { margin-right: 20px; }
-label[for="reset"] { float: right; }
 input[type=radio]:checked + label { opacity: 1; }
 
 input[type=text],

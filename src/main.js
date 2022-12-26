@@ -1,6 +1,8 @@
 import App from './App.svelte';
+import Auth from './auth.svelte';
 
-const app = new App({
+
+const app = new Auth({
 	target: document.body,
 	props: {
 		name: 'world'
